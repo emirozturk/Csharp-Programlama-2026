@@ -6,7 +6,7 @@
     •	Toplam 300 TL’yi geçerse %10 indirim uygulayınız.
     •	Müşterinin verdiği paraya göre para üstünü hesaplayınız; para yetersizse eksik tutarı yazdırınız.
     */
-    static int[] fiyatlar = { 150, 160, 150, 180, 120, 200, 210, 250, 255, 180 };
+    static int[] fiyatlar = { 0, 150, 160, 150, 180, 120, 200, 210, 250, 255, 180 };
     public static int Menu()
     {
         Console.WriteLine("Kahve seçiniz:");
@@ -37,7 +37,7 @@
     }
     public static int TutarHesapla(int numara, int boyut)
     {
-        var boyutFarki = new int[] { 0, 0, 10, 25 };
+        var boyutFarki = new int[] { 0, 0, 10, 20 };
         return fiyatlar[numara] + boyutFarki[boyut];
     }
     public static int IndirimYap(int tutar)
